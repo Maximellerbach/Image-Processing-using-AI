@@ -29,7 +29,7 @@ for img_path in tqdm(dos):
         total = w*h
         maximum = 1500*1500
         
-        if total>maximum: #if image is too big, divideimage in multiple little image to pred and reconstruct it later
+        if total>maximum: #if image is too big, divide image in multiple little image to pred and reconstruct it later
             ratio = maximum/total
 
             nb = 2
