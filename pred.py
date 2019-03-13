@@ -16,12 +16,12 @@ model2 = load_model('upmodel2.h5')
 model1.summary()
 model2.summary()
 
-dos = glob('..\\out\\*')
+dos = glob('exemple\\*') #please enter the path of the file containing image
 i = 0
-for path in tqdm(dos):
+for img_path in tqdm(dos):
     try:
         
-        imgo = cv2.imread(path)
+        imgo = cv2.imread(img_path)
         i+=1
 
         w,h = imgo.shape[1], imgo.shape[0]
@@ -68,7 +68,7 @@ for path in tqdm(dos):
                     new_img[h*ys-h :h*ys, w*xs-w :w*xs] = comp_img[n]
                     n+=1                
                     
-            cv2.imwrite('..\\data\\'+str(i)+'.jpg',new_img*255)
+            cv2.imwrite('out\\'+str(i)+'.jpg',new_img*255) #please enter your output file
 
 
         else: #if image is little enought just pred the whole image
@@ -78,7 +78,7 @@ for path in tqdm(dos):
             x = model1.predict(pred/255)
             new_imgo = model2.predict(x)
         
-            cv2.imwrite('..\\data\\'+str(i)+'.jpg',new_imgo[0]*255)
+            cv2.imwrite('out\\'+str(i)+'.jpg',new_imgo[0]*255) #please enter your output file
 
     except:
         print('error')
