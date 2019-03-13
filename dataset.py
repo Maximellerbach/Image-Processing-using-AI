@@ -15,8 +15,9 @@ for path in tqdm(dos):
 
 	if img.shape[0]*img.shape[1]>=30000:
 		img = cv2.resize(img,(150,100))
-		x = cv2.blur(img,(2,2))
+		x = cv2.blur(img,(2,2)) #if you want blured image as X
 		X_train.append(x/255)
+		Y_train.append(img/255)
 
 	if len(X_train)>= 2000:
 		X_train = np.array(X_train)
