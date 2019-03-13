@@ -7,7 +7,7 @@ import cv2
 Y_train = []
 X_train = []
 
-dos = glob('..\\car_img\\*')
+dos = glob('car_dataset\\*')
 i=0
 
 for path in tqdm(dos):
