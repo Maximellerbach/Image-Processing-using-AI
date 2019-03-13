@@ -33,8 +33,8 @@ for path in tqdm(dos):
 X_train = np.array(X_train)
 Y_train = np.array(Y_train)
 i+=1
-np.save('dataset\\'+str(i)+'_blurX_train.npy', X_train)
-np.save('dataset\\'+str(i)+'_blurY_train.npy', Y_train)
+np.save('dataset\\'+str(i)+'_X_train.npy', X_train)
+np.save('dataset\\'+str(i)+'_Y_train.npy', Y_train)
 
 print('saved X_train', i)
 print('saved Y_train', i)
