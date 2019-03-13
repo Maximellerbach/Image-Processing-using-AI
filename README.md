@@ -1,10 +1,10 @@
 # Image-Processing-using-AI
 in this repo, I create models to process image (upscale, debluring...)
+--
+-I used this dataset : http://ai.stanford.edu/~jkrause/cars/car_dataset.html
 
-I used this dataset : http://ai.stanford.edu/~jkrause/cars/car_dataset.html
---------------
-you can use pretrained AI: 
---------------
+-you can use pretrained AI: 
+
 upmodel1/2 are for upscaling image
 debmodel1/2 are for debluring image
 
