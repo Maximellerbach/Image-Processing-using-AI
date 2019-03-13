@@ -89,7 +89,7 @@ if __name__ == '__main__':
     model = model_object()
 
     #load dataset
-    dos = glob('*.npy')
+    dos = glob('dataset\\*.npy')
     print(len(dos))
 
     #train model with every dataset 
