@@ -95,9 +95,9 @@ if __name__ == '__main__':
     #train model with every dataset 
     for i in range(len(dos)//2):
 
-        X_train = np.load('dataset\\'+str(i)+'_upX_train.npy')
+        X_train = np.load('dataset\\'+str(i)+'_X_train.npy')
         print('loaded X_train', i)
-        Y_train = np.load('dataset\\'+str(i)+'_upY_train.npy')
+        Y_train = np.load('dataset\\'+str(i)+'_Y_train.npy')
         print('loaded Y_train', i)
     
         #train model
