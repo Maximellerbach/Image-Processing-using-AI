@@ -46,8 +46,8 @@ class model_object():
         model2.add(Conv2DTranspose(32, kernel_size=(3,3), strides=(1,1), padding = "same", input_shape = (None,None,32)))
         model2.add(Activation("relu"))  
 
-        model1.add(Conv2DTranspose(32, kernel_size=(3,3), strides=(1,1), padding="same"))
-        model1.add(Activation("relu"))
+        model2.add(Conv2DTranspose(32, kernel_size=(3,3), strides=(1,1), padding="same"))
+        model2.add(Activation("relu"))
 
         model2.add(Conv2D(3, kernel_size=(1,1), strides=(1,1), padding = "same"))
         model2.add(Activation("sigmoid"))
