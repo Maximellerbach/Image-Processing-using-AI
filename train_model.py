@@ -12,15 +12,14 @@ import cv2
 import time
 
 class model_object():
-    def __init__(self):
+    def __init__(self, load=False):
 
-        #create or load models
-        self.model1, self.model2 = self.create_model()
-
-        #self.model1 = load_model('debmodel1.h5')
-        #self.model2 = load_model('debmodel2.h5')
-
-
+        # create or load models
+        if load:
+            self.model1 = load_model('debmodel1.h5')
+            self.model2 = load_model('debmodel2.h5')
+        else:
+            self.model1, self.model2 = self.create_model()
 
     def create_model(self):
         
